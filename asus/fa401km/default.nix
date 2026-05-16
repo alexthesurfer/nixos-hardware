@@ -13,7 +13,7 @@
 
   hardware.nvidia = {
     modesetting.enable = lib.mkDefault true;
-    open = lib.mkDefault false;
+    open = lib.mkDefault true;
     nvidiaSettings = lib.mkDefault true;
     dynamicBoost.enable = lib.mkDefault true;
 
