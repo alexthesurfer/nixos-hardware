@@ -9,6 +9,7 @@
     ../../common/gpu/nvidia/ampere
     ../../common/pc/laptop
     ../../common/pc/ssd
+    ../../battery.nix
   ];
 
   hardware.nvidia = {
@@ -23,6 +24,8 @@
     };
   };
 
+  services.power-profiles-daemon.enable = lib.mkDefault true;
+
   services = {
     asusd = {
       enable = lib.mkDefault true;
@@ -30,4 +33,5 @@
     };
     supergfxd.enable = lib.mkDefault true;
   };
+
 }
