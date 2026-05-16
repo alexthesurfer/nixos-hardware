@@ -5,31 +5,31 @@
     ../../common/cpu/amd
     ../../common/cpu/amd/pstate.nix
     ../../common/gpu/amd
-    ../../common/gpu/nvidia/prime.nix
-    ../../common/gpu/nvidia/ampere
+    #../../common/gpu/nvidia/prime.nix
+    #../../common/gpu/nvidia/ampere
     ../../common/pc/laptop
     ../../common/pc/ssd
   ];
 
-  hardware.nvidia = {
-    modesetting.enable = lib.mkDefault true;
-    open = lib.mkDefault true;
-    nvidiaSettings = lib.mkDefault true;
-    dynamicBoost.enable = lib.mkDefault true;
+  # hardware.nvidia = {
+  #   modesetting.enable = lib.mkDefault true;
+  #   open = lib.mkDefault true;
+  #   nvidiaSettings = lib.mkDefault true;
+  #   dynamicBoost.enable = lib.mkDefault true;
 
-    prime = {
-      amdgpuBusId = "PCI:102:0:0";
-      nvidiaBusId = "PCI:100:0:0";
-    };
-  };
+  #   prime = {
+  #     amdgpuBusId = "PCI:102:0:0";
+  #     nvidiaBusId = "PCI:100:0:0";
+  #   };
+  # };
 
   services.power-profiles-daemon.enable = lib.mkDefault true;
 
   services = {
-    asusd = {
-      enable = lib.mkDefault true;
-      enableUserService = lib.mkDefault true;
-    };
+    # asusd = {
+    #   enable = lib.mkDefault true;
+    #   enableUserService = lib.mkDefault true;
+    # };
     supergfxd.enable = lib.mkDefault true;
   };
 
